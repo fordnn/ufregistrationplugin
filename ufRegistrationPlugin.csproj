@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9F2617F1-7109-4101-86CA-93E899CCE150}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>forDNN.Modules.ufRegistrationPlugin</RootNamespace>
+    <AssemblyName>forDNN.Modules.ufRegistrationPlugin</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetNuke, Version=6.2.2.125, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DNN\test622\bin\DotNetNuke.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DNN\test622\bin\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\CommonController.cs" />
+    <Compile Include="Components\DNSController.cs" />
+    <Compile Include="Components\DnsDig\Dig.cs" />
+    <Compile Include="Components\DnsDig\Header.cs" />
+    <Compile Include="Components\DnsDig\Question.cs" />
+    <Compile Include="Components\DnsDig\RecordReader.cs" />
+    <Compile Include="Components\DnsDig\Records\Record.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordA.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordAAAA.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordAFSDB.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordCNAME.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordDNAME.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordDS.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordHINFO.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordISDN.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordKEY.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordKX.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordLOC.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordMB.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordMG.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordMINFO.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordMR.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordMX.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordNAPTR.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordNS.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordNSAP.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordNULL.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordPTR.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordPX.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordRP.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordRT.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordSIG.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordSOA.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordSRV.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordTKEY.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordTSIG.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordTXT.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordUnknown.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordWKS.cs" />
+    <Compile Include="Components\DnsDig\Records\RecordX25.cs" />
+    <Compile Include="Components\DnsDig\Request.cs" />
+    <Compile Include="Components\DnsDig\Resolver.cs" />
+    <Compile Include="Components\DnsDig\Response.cs" />
+    <Compile Include="Components\DnsDig\RR.cs" />
+    <Compile Include="Components\DnsDig\Structs.cs" />
+    <Compile Include="Components\ResponseInfo.cs" />
+    <Compile Include="Components\ufRegistrationSettingController.cs" />
+    <Compile Include="Components\ufRegistrationSettingInfo.cs" />
+    <Compile Include="ufRegistrationScript.aspx.cs">
+      <DependentUpon>ufRegistrationScript.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\DataProvider.cs" />
+    <Compile Include="Components\SqlDataProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ufRegistrationPlugin.ascx.cs">
+      <DependentUpon>ufRegistrationPlugin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ufRegistrationPlugin.ascx.designer.cs">
+      <DependentUpon>ufRegistrationPlugin.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_LocalResources\ufRegistrationScript.aspx.resx">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_LocalResources\ufRegistrationPlugin.ascx.resx">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SQL\01.00.00.SqlDataProvider" />
+    <None Include="Install\ufRegistrationPlugin.dnn" />
+    <None Include="SQL\Uninstall.SqlDataProvider" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="js\knockout-2.2.1.js" />
+    <Content Include="js\ufRegistrationPlugin.js" />
+    <Content Include="ufRegistrationPlugin.css" />
+    <Content Include="ufRegistrationScript.aspx" />
+    <Content Include="ufRegistrationPlugin.ascx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62596</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://production.local/482/DesktopModules/ufRegistrationPlugin</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://production.local/482</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>D:\Work\Projects\DotNetNukeStudio\ufRegistrationPlugin\Install\CopyCompiledToLive.bat</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,104 @@
+<dotnetnuke type="Package" version="5.0">
+  <packages>
+    <package name="forDNN.ufRegistrationPlugin" type="Module" version="1.0.0">
+      <friendlyName>forDNN.ufRegistrationPlugin</friendlyName>
+      <description>
+        User Friendly Registration Plugin - special plug-in that extends the functionality of the DotNetNuke registration form.
+        Features list:...
+      </description>
+      <owner>
+        <name>forDNN.ufRegistrationPlugin</name>
+        <organization>forDNN Team</organization>
+        <url>http://forDNN.com</url>
+        <email>support@forDNN.com</email>
+      </owner>
+      <license>The MIT License (MIT)</license>
+      <releaseNotes></releaseNotes>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>forDNN.ufRegistrationPlugin</moduleName>
+            <foldername>Admin\Security</foldername>
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>forDNN.ufRegistrationPlugin</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>DesktopModules/Admin/Security/ufRegistrationPlugin.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle>User Friendly Registration Plugin</controlTitle>
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+
+        <component type="Assembly">
+          <assemblies>
+            <basePath>bin</basePath>
+            <assembly>
+              <name>forDNN.Modules.ufRegistrationPlugin.dll</name>
+              <version>01.00.00</version>
+            </assembly>
+          </assemblies>
+        </component>
+
+        <component type="Script">
+          <scripts>
+            <basePath>DesktopModules\Admin\Security</basePath>
+            <script type="Install">
+              <name>01.00.00.SqlDataProvider</name>
+            </script>
+            <script type="UnInstall">
+              <name>Uninstall.SqlDataProvider</name>
+            </script>
+          </scripts>
+        </component>
+
+        <component type="File">
+          <files>
+            <basePath>DesktopModules\Admin\Security</basePath>
+            <file>
+              <name>ufRegistrationPlugin.ascx</name>
+            </file>
+            <file>
+              <name>ufRegistrationScript.aspx</name>
+            </file>
+            <file>
+              <name>ufRegistrationPlugin.css</name>
+            </file>
+            <file>
+              <path>js</path>
+              <name>ufRegistrationPlugin.js</name>
+            </file>
+            <file>
+              <path>js</path>
+              <name>knockout-2.2.1.js</name>
+            </file>
+            <file>
+              <path>App_LocalResources</path>
+              <name>ufRegistrationPlugin.ascx.resx</name>
+            </file>
+            <file>
+              <path>App_LocalResources</path>
+              <name>ufRegistrationScript.aspx.resx</name>
+            </file>
+            <file>
+              <name>01.00.00.SqlDataProvider</name>
+            </file>
+            <file>
+              <name>Uninstall.SqlDataProvider</name>
+            </file>
+          </files>
+        </component>
+      </components>
+    </package>
+  </packages>
+</dotnetnuke>
