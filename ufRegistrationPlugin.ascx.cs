@@ -32,9 +32,6 @@ namespace forDNN.Modules.ufRegistrationPlugin
 			css.Attributes["media"] = "all";
 			Page.Header.Controls.Add(css);
 
-			cbVerifyUserName.Attributes.Add("onclick", "javascript:checkUncheck(this, '[VerifyUserName=\"1\"],[VerifyUserName=\"1\"]>input');");
-			cbSuggestUserName.Attributes.Add("onclick", "javascript:checkUncheck(this, '[SuggestUserName=\"1\"]');");
-
 			btnActivatePlugin.Text = IsPluginInstalled() ?
 				Localization.GetString("DeActivatePlugin", this.LocalResourceFile) : Localization.GetString("ActivatePlugin", this.LocalResourceFile);
 
